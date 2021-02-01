@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Countdown Timer</title>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .content-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 60%;
+      height: fit-content;
+    }
+
+    .content-wrapper {
+      width: 60%;
+      height: fit-content;
+    }
+
+    .time-input {
+      width: 120px;
+      height: 40px;
+      font-size: 16px;
+      font-weight: bold;
+      color: black;
+      border: 2px solid #5793fb;
+      border-radius: 5px;
+      padding: 5px;
+      outline: none;
+    }
+
+    .btn {
+      width: 100px;
+      height: 40px;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 5px;
+      color: white;
+      border: 0px;
+      cursor: pointer;
+    }
+
+    .start {
+      background-color: #1ca345;
+    }
+
+    .pause {
+      background-color: #0081ff;
+    }
+
+    .stop {
+      background-color: #de3f44;
+    }
+
+    .reset {
+      background-color: #ffc001;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <input class="time-input" type="number" value="0" id="h">
+    <input class="time-input" type="number" value="0" id="m">
+    <input class="time-input" type="number" value="0" id="s">
+    <button class="btn start" onclick="onStartClick()" id="start">Start</button>
+    <button class="btn pause" onclick="onPauseClick()" id="pause" style="display: none;">Pause</button>
+    <button class="btn stop" onclick="onStopClick()" id="stop" style="display: none;">Stop</button>
+    <button class="btn reset" onclick="onResetClick()" id="reset" style="display: none;">Reset</button>
+  </div>
+
+  <script src="/Task-1/app.js"></script>
+</body>
+
+</html>
